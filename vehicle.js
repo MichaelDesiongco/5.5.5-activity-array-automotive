@@ -9,17 +9,9 @@ class Vehicle {
         this.mileage = mileage;
         this.started = false;
         this.numberOfWheels = 0;
+        this.fuel = 100;
     }
 
-    start() {
-        if (this.fuel > 0) {
-            return this.started = true;
-            console.log("engine started...!!!");
-        } else {
-            return this.started = false;
-            console.log("engine cannot start...");
-        }
-    }
     accelerate() {
         if (this.started) {
             if (this.fuel > 0) {
@@ -52,24 +44,8 @@ class Vehicle {
         }
     }
     stop() {
+        console.log('engine off')
         this.started = false;
-    }
-
-    drive() {
-        accelerate();
-    }
-    brake() {
-        decelerate();
-    }
-
-    autoPark()
-    {
-
-    }
-
-    autoDrive()
-    {
-      
     }
 
     typeOfVehicle(wheels) {
